@@ -30,11 +30,6 @@ public class ReservationRestController {
     }
 
 
-
-
-
-
-
     @GetMapping("/retrieve-reservation-date-status/{d}/{v}")
     public List<Reservation> retrieveReservationParDateEtStatus
             (@PathVariable("d") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date d, @PathVariable("v") boolean b) {
@@ -43,28 +38,20 @@ public class ReservationRestController {
 
 
 
-
-
-
-
-
-
-
-
-    // http://localhost:8089/tpfoyer/reservation/add-reservation
+    // http://localhost:8083/tpfoyer/reservation/add-reservation
     @PostMapping("/add-reservation")
     public Reservation addReservation(@RequestBody Reservation r) {
         Reservation reservation = reservationService.addReservation(r);
         return reservation;
     }
 
-    // http://localhost:8089/tpfoyer/reservation/remove-reservation/{reservation-id}
+    // http://localhost:8083/tpfoyer/reservation/remove-reservation/{reservation-id}
     @DeleteMapping("/remove-reservation/{reservation-id}")
     public void removeReservation(@PathVariable("reservation-id") String rId) {
         reservationService.removeReservation(rId);
     }
 
-    // http://localhost:8089/tpfoyer/reservation/modify-reservation
+    // http://localhost:8083/tpfoyer/reservation/modify-reservation
     @PutMapping("/modify-reservation")
     public Reservation modifyReservation(@RequestBody Reservation r) {
         Reservation reservation = reservationService.modifyReservation(r);

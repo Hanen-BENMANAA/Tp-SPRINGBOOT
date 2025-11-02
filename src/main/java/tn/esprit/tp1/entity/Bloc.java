@@ -20,7 +20,7 @@ public class Bloc implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idBloc;
+    long nomDuBloc;
 
     String nomBloc;
     long capaciteBloc;
