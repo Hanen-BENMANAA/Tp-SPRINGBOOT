@@ -11,7 +11,7 @@ import tn.esprit.tp1.services.IBlocService;
 
 import java.util.List;
 
-@Tag(name = "Gestion Bloc pour 4CC1")
+@Tag(name = "Gestion Bloc pour 4DS2")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/bloc")
